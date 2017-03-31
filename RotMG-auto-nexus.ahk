@@ -29,7 +29,7 @@ Loop {
 					Send F ; all other classes drink health potion
 				}
 			}
-			sleep 50
+			sleep 200
 		}
 	}
 }	
