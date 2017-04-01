@@ -41,6 +41,13 @@ IfWinActive, Adobe Flash Player
 }
 Return
 	
+Tab::
+IfWinActive, Adobe Flash Player
+{
+	Send ``Auto-reply: I'm taking a break from trading for a bit. I may be free in half an hour if you are still interested.{Enter}
+}
+Return
+	
 ; +Tab::
 ; Send "`"
 ; sleep 100
