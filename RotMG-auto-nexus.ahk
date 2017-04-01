@@ -16,9 +16,9 @@ Loop {
 		PixelGetColor, hpcolor4, 1800, 459
 		PixelGetColor, hpcolor5, 1850, 459
 		PixelGetColor, hpendcolor, 1890, 459
-		if (graycolor = 0x363636) and (nexusiconblack = 0x090909) and (hpcolor3 != 0x3434E0) and (hpcolor4 != 0x3434E0) and (hpcolor5 != 0x3434E0) and (hpendcolor != 0x3434E0)
+		if (graycolor = 0x363636) and (nexusiconblack = 0x090909) and (hpcolor3 = 0x545454) and (hpcolor4 = 0x545454) and (hpcolor5 = 0x545454) and (hpendcolor = 0x545454)
 		{
-			if (hpcolor != 0x3434E0) and (hpcolor2 != 0x3434E0)
+			if (hpcolor = 0x545454) and (hpcolor2 = 0x545454)
 			{
 				Send R
 			} else {
@@ -26,7 +26,7 @@ Loop {
 				{
 					Send {Space} ; priest heal spell
 				} else {
-					Send F ; all other classes drink health potion
+					; Send F ; all other classes drink health potion
 				}
 			}
 			sleep 400
