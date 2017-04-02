@@ -25,11 +25,12 @@ Loop {
 				if (classicon = 0x9D9D9D)
 				{
 					Send {Space} ; priest heal spell
+					sleep 400
 				} else {
 					; Send F ; all other classes drink health potion
+					; sleep 400
 				}
 			}
-			sleep 400
 		}
 	}
 }	
@@ -49,7 +50,8 @@ SendToChat("{Enter}","heal plz")
 Return
 	
 ^!Tab::
-SendToChat("{Enter}","Regroup on me for fame train. Priests, pallys, and warriors please use your spells.")	
+; SendToChat("{Enter}","Regroup on me for fame train. Priests, pallys, and warriors please use your spells.")	
+SendToChat("{Enter}","Priests, pallys, and warriors please don't let your mana get above 90%. Use your spells to keep the train moving fast.")	
 Return
 	
 ~Tab::
