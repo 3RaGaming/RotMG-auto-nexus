@@ -34,25 +34,27 @@ Loop {
 	}
 }	
 
+SendToChat(chatkey, msg) {
+	IfWinActive, Adobe Flash Player
+	{
+		ClipSave := clipboard
+		clipboard = %msg%
+		Send %chatkey%^v{Enter}
+		clipboard = %ClipSave%
+	}
+}
+
+~^g::
+SendToChat("{Enter}","heal plz")
+Return
+	
 ^!Tab::
-IfWinActive, Adobe Flash Player
-{
-	Send {Enter}Regroup on me for fame train.{Enter}
-}
+SendToChat("{Enter}","Regroup on me for fame train. Priests, pallys, and warriors please use your spells.")	
 Return
 	
-Tab::
-IfWinActive, Adobe Flash Player
-{
-	Send ``Auto-reply: I'm taking a break from trading for a bit. I may be free in half an hour if you are still interested.{Enter}
-}
+~Tab::
+SendToChat("``","Auto-reply: I'm taking a break from trading for a bit. I may be free in half an hour if you are still interested.")	
 Return
-	
-; +Tab::
-; Send "`"
-; sleep 100
-; Send test{Enter}
-; Return
 
 ^!Q::
 ExitApp
